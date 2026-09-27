@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos CUCEA</title>
+  </head>
+  <body>
+    <h1>Evento universitario</h1>
+    <form action="" method="post">
+      <table>
+        <thead>
+          <tr>
+            <th align="left">Registro de participantes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <label for="nombre">Nombre</label><br />
+              <input
+                type="text"
+                name="nombre"
+                id="nombre"
+                required
+                maxlength="30"
+                minlength="3"
+                placeholder="Ej. Kimberly"
+              />
+              <br /><br />
+
+              <label for="ap_paterno">Apellido Paterno</label><br />
+              <input
+                type="text"
+                name="ap_paterno"
+                id="ap_paterno"
+                required
+                size="15"
+                placeholder="Ej. Segundo"
+              />
+              <br /><br />
+
+              <label for="ap_materno">Apellido Materno</label><br />
+              <input
+                type="text"
+                name="ap_materno"
+                id="ap_materno"
+                size="15"
+                placeholder="Ej. Rodríguez"
+              />
+              <br /><br />
+
+              <label for="correo">Correo Electrónico</label><br />
+              <input
+                type="email"
+                name="correo"
+                id="correo"
+                required
+                placeholder="kimberly.segundo@alumnos.udg.mx"
+              />
+              <br /><br />
+
+              <label for="edad">Edad</label><br />
+              <input
+                type="number"
+                name="edad"
+                id="edad"
+                required
+                min="15"
+                max="99"
+                placeholder="21"
+                style="width: 60px"
+              />
+              <br /><br />
+
+              <label for="fecha">Fecha de nacimiento</label><br />
+              <input type="date" name="fecha" id="fecha" required />
+              <br /><br />
+
+              <label>Turno</label><br />
+              <input
+                type="radio"
+                name="turno"
+                id="turno_matu"
+                value="matu"
+                required
+              />
+              <label for="turno_matu">Matutino</label><br />
+              <input
+                type="radio"
+                name="turno"
+                id="turno_vesp"
+                value="vesp"
+                required
+              />
+              <label for="turno_vesp">Vespertino</label>
+              <br /><br />
+
+              <label for="programa">Programa en curso</label><br />
+              <select name="programa" id="programa" required>
+                <option value="" disabled selected>
+                  -- Selecciona tu programa --
+                </option>
+
+                <optgroup label="Licenciaturas">
+                  <option value="LIAD">Lic. en Administración</option>
+                  <option value="LAFI">
+                    Lic. en Administración Financiera y Sistemas
+                  </option>
+                  <option value="LAGP">
+                    Lic. en Administración Gubernamental y Políticas Públicas
+                  </option>
+                  <option value="LCOP">Lic. en Contaduría Pública</option>
+                  <option value="LECO">Lic. en Economía</option>
+                  <option value="LGNG">
+                    Lic. en Gestión de Negocios Gastronómicos
+                  </option>
+                  <option value="LIGA">
+                    Lic. en Gestión y Economía Ambiental
+                  </option>
+                  <option value="INNE">Lic. en Ingeniería en Negocios</option>
+                  <option value="LMED">
+                    Lic. en Mercadotecnia Digital (modalidad en línea)
+                  </option>
+                  <option value="LNI">Lic. en Negocios Internacionales</option>
+                  <option value="LTUR">Lic. en Turismo</option>
+                  <option value="LTIN">
+                    Lic. en Tecnologías de la Información
+                  </option>
+                  <option value="LIRH">Lic. en Recursos Humanos</option>
+                  <option value="LRCP">
+                    Lic. en Relaciones Públicas y Comunicación
+                  </option>
+                </optgroup>
+
+                <optgroup label="Maestrías">
+                  <option value="MTI">
+                    Maestría en Tecnologías de Información
+                  </option>
+                  <option value="MAN">
+                    Maestría en Administración de Negocios
+                  </option>
+                  <option value="MGP">Maestría en Gestión Pública</option>
+                  <option value="MCO">Maestría en Contaduría</option>
+                  <option value="MEC">Maestría en Economía</option>
+                  <option value="MPP">Maestría en Políticas Públicas</option>
+                </optgroup>
+
+                <optgroup label="Doctorados">
+                  <option value="DTI">
+                    Doctorado en Tecnologías de la Información
+                  </option>
+                  <option value="DCA">
+                    Doctorado en Ciencias Administrativas
+                  </option>
+                  <option value="DPPD">
+                    Doctorado en Políticas Públicas y Desarrollo
+                  </option>
+                </optgroup>
+              </select>
+              <br /><br />
+
+              <label for="condiciones"
+                >Por favor lea y acepte los términos de uso</label
+              ><br />
+              <input
+                type="checkbox"
+                name="condiciones"
+                id="condiciones"
+                value="1"
+                required
+              />
+              Acepto los
+              <a href="termCondiciones.html">términos y condiciones</a>
+              <br /><br />
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td align="left">
+              <input type="submit" value="Registrar" />
+              <input type="reset" value="Limpiar" />
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </form>
+  </body>
+</html>
