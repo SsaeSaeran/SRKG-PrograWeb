@@ -1,0 +1,105 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  margin: 30px auto;
+}
+h1 {
+  color: #403f5f;
+  text-align: center;
+  font-size: 38px;
+  margin: 20px 0px 35px 0px;
+}
+table {
+  border-spacing: 5px;
+  margin: 0 auto;
+}
+tr:nth-child(8) td {
+  border-top: solid 20px white;
+}
+td {
+  width: 68px;
+  height: 68px;
+  position: relative;
+}
+a {
+  display: block;
+  width: 68px;
+  height: 68px;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+}
+a:hover {
+  position: relative;
+  z-index: 999;
+  transform: scale(1.15);
+  border: solid 2px gray;
+}
+span {
+  display: block;
+  text-align: right;
+  font-size: 10px;
+  padding: 4px 5px 0px 0px;
+}
+strong {
+  display: block;
+  font-size: 22px;
+  margin: 2px 0px;
+}
+small {
+  display: block;
+  font-size: 9px;
+}
+ul {
+  width: 960px;
+  margin: 40px auto;
+  padding: 0px;
+}
+li {
+  display: inline-block;
+  width: 230px;
+  font-size: 14px;
+  margin: 8px 4px;
+}
+i {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  margin: 0px 10px 0px 0px;
+}
+.metAlc a,
+.metAlcalinoterreos a,
+.lant a {
+  color: white;
+}
+.metAlc {
+  background-color: red;
+}
+.metAlcalinoterreos {
+  background-color: orange;
+}
+.metTrans {
+  background-color: #a1bfdf;
+}
+.metPostrans {
+  background-color: violet;
+}
+.metaloides {
+  background-color: yellow;
+}
+.nonMetReact {
+  background-color: yellowgreen;
+}
+.gasNob {
+  background-color: pink;
+}
+.lant {
+  background-color: #4796cd;
+}
+.actono {
+  background-color: lightgreen;
+}
+.propDesc {
+  background-color: lightgray;
+}
