@@ -1,0 +1,706 @@
+/* ============================================================
+   Mi Biblioteca · hoja de estilos personalizada
+   Paleta: negro, vino, rojo y blanco cremoso (nunca blanco puro)
+   Tecnicas del curso: Flexbox y position
+   ============================================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --negro: #16110F;
+    --carbon: #241B19;
+    --vino: #6B1F2A;
+    --vino-claro: #8C2A38;
+    --vino-oscuro: #4C1620;
+    --rojo: #8C1F1F;
+    --crema: #F0F8FF;
+    --crema-clara: #F9FCFF;
+    --arena: #CBD9E6;
+    --borde: #DDE8F2;
+    --texto: #2B2422;
+    --suave: #6E6C74;
+}
+
+body {
+    background-color: var(--crema);
+    color: var(--texto);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1, h2, h3, .marca {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+a {
+    color: var(--vino);
+}
+
+a:hover {
+    color: var(--vino-claro);
+}
+
+.texto-suave {
+    color: var(--suave);
+}
+
+.texto-chico {
+    font-size: 0.85rem;
+}
+
+/* ============================================================
+   Paginas de login y registro
+   Mismo esquema que login_con: titulo, linea y formulario.
+   ============================================================ */
+
+.pagina-auth {
+    background-color: var(--crema);
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Flexbox: centra la tarjeta en el alto de la pantalla */
+.contenedor-auth {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+}
+
+/* Los dos paneles se estiran a la misma altura */
+.tarjeta-auth {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    max-width: 940px;
+}
+
+/* Flexbox en columna para centrar el texto del panel */
+.panel-lateral {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 3rem 2.5rem;
+    background-color: var(--vino);
+    color: var(--crema-clara);
+    border-radius: 16px 0 0 16px;
+}
+
+.titulo-panel {
+    font-size: 2.6rem;
+    line-height: 1.1;
+    margin-bottom: 0.6rem;
+}
+
+/* Icono de libro debajo del titulo del panel */
+.icono-libro {
+    display: block;
+    font-size: 2rem;
+    color: #FFFFFF;
+}
+
+.panel-formulario {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--crema-clara);
+    border: 1px solid var(--borde);
+    border-left: none;
+    border-radius: 0 16px 16px 0;
+    padding: 3rem 2.5rem;
+}
+
+.titulo-form {
+    font-size: 1.7rem;
+    margin-bottom: 6px;
+    color: var(--negro);
+}
+
+.linea-titulo {
+    border: 0;
+    border-top: 2px solid var(--vino);
+    opacity: 0.35;
+    margin: 10px 0 20px;
+}
+
+.enlace-simple {
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.enlace-simple:hover {
+    text-decoration: underline;
+}
+
+/* ============================================================
+   Barra de navegación
+   ============================================================ */
+
+.barra-principal {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--vino);
+    border-bottom: 3px solid var(--vino-oscuro);
+}
+
+.barra-principal .marca {
+    color: var(--crema-clara);
+    letter-spacing: 1px;
+    font-size: 1.35rem;
+}
+
+.barra-principal .nav-link {
+    color: var(--arena);
+}
+
+.barra-principal .nav-link:hover {
+    color: var(--crema-clara);
+}
+
+/* Flexbox: nombre, etiqueta de rol y boton alineados */
+.usuario-sesion {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--crema-clara);
+    font-size: 0.9rem;
+}
+
+.etiqueta-rol {
+    padding: 0.1rem 0.45rem;
+    border: 1px solid rgba(250, 246, 238, 0.5);
+    border-radius: 999px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--crema-clara);
+}
+
+.etiqueta-usuario {
+    border-color: rgba(250, 246, 238, 0.25);
+}
+
+.btn-salir {
+    border: 1px solid rgba(250, 246, 238, 0.5);
+    color: var(--crema-clara);
+}
+
+.btn-salir:hover {
+    background-color: var(--vino-oscuro);
+    border-color: var(--vino-oscuro);
+    color: var(--crema-clara);
+}
+
+/* ============================================================
+   Botones
+   ============================================================ */
+
+.btn-vino {
+    background-color: var(--vino);
+    border-color: var(--vino);
+    color: var(--crema-clara);
+}
+
+.btn-vino:hover,
+.btn-vino:focus {
+    background-color: var(--vino-claro);
+    border-color: var(--vino-claro);
+    color: var(--crema-clara);
+}
+
+.btn-contorno {
+    border: 1px solid var(--arena);
+    color: var(--vino);
+    background-color: transparent;
+}
+
+.btn-contorno:hover {
+    background-color: var(--crema-clara);
+    border-color: var(--vino);
+    color: var(--vino);
+}
+
+.btn-eliminar {
+    background-color: transparent;
+    border: 1px solid #C9A3A7;
+    color: var(--rojo);
+}
+
+.btn-eliminar:hover {
+    background-color: var(--rojo);
+    border-color: var(--rojo);
+    color: var(--crema-clara);
+}
+
+/* ============================================================
+   Encabezado de pagina, cajas y tarjetas
+   ============================================================ */
+
+/* Flexbox: titulo a la izquierda y boton a la derecha */
+.cabecera-pagina {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.panel-caja {
+    position: relative;
+    background-color: var(--crema-clara);
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 6px rgba(22, 17, 15, 0.05);
+}
+
+.titulo-caja {
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--borde);
+}
+
+/* Flexbox en columna + franja absoluta a la izquierda */
+.tarjeta-indicador {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    padding: 1.1rem 1.3rem 1.1rem 1.6rem;
+    background-color: var(--crema-clara);
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+}
+
+.tarjeta-indicador::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background-color: var(--vino);
+}
+
+.nombre-indicador {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--suave);
+}
+
+.numero-indicador {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2.4rem;
+    line-height: 1.1;
+    color: var(--negro);
+}
+
+/* ============================================================
+   Tabla de libros
+   ============================================================ */
+
+.tabla-libros {
+    font-size: 0.9rem;
+}
+
+.tabla-libros th,
+.tabla-libros td {
+    padding: 0.65rem 0.5rem;
+}
+
+.tabla-libros thead th {
+    background-color: var(--vino);
+    color: var(--crema-clara);
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    border-bottom: none;
+}
+
+.tabla-libros tbody td {
+    vertical-align: middle;
+    border-color: var(--borde);
+}
+
+.tabla-libros tbody tr:hover {
+    background-color: #E8F3FB;
+}
+
+/* Flexbox: Editar y Eliminar en una sola fila, alineados a la derecha */
+.acciones-tabla {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+/* ============================================================
+   Etiquetas de estado
+   ============================================================ */
+
+.badge-estado {
+    display: inline-block;
+    padding: 0.25rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.estado-pendiente {
+    background-color: #EFE6D6;
+    color: #6B5C46;
+    border: 1px solid #DCCFB8;
+}
+
+.estado-leyendo {
+    background-color: var(--vino);
+    color: var(--crema-clara);
+}
+
+.estado-terminado {
+    background-color: var(--negro);
+    color: var(--crema-clara);
+}
+
+/* ============================================================
+   Lista de agregados recientemente
+   ============================================================ */
+
+.lista-reciente {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.lista-reciente li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--borde);
+}
+
+.lista-reciente li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* ============================================================
+   Grafica y leyenda
+   ============================================================ */
+
+.leyenda {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.1rem;
+    font-size: 0.85rem;
+    color: var(--suave);
+}
+
+.punto {
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    margin-right: 0.4rem;
+}
+
+.punto-pendiente {
+    background-color: #B7906A;
+}
+
+.punto-leyendo {
+    background-color: var(--vino-claro);
+}
+
+.punto-terminado {
+    background-color: var(--negro);
+}
+
+#graficaEstados {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ============================================================
+   Formularios
+   ============================================================ */
+
+/* Los campos usan crema en lugar del blanco puro de Bootstrap */
+.form-control,
+.form-select {
+    background-color: var(--crema-clara);
+    border-color: var(--arena);
+    color: var(--texto);
+}
+
+.form-control:focus,
+.form-select:focus {
+    background-color: var(--crema-clara);
+    border-color: var(--vino-claro);
+    box-shadow: 0 0 0 0.2rem rgba(107, 31, 42, 0.15);
+}
+
+.form-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--carbon);
+}
+
+/* ============================================================
+   Pie de pagina
+   ============================================================ */
+
+.pie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid var(--borde);
+    margin-top: 2rem;
+    padding: 1.2rem 0;
+    font-size: 0.85rem;
+    color: var(--suave);
+}
+
+/* ============================================================
+   Portadas y pagina de detalle del libro
+   ============================================================ */
+
+/* Flexbox: portada pequeña + titulo, alineados al centro */
+.celda-titulo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.miniatura {
+    width: 38px;
+    height: 54px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid var(--borde);
+    background-color: var(--crema);
+    flex-shrink: 0;
+}
+
+/* Cuando el libro todavía no tiene portada se muestra la inicial del titulo */
+.miniatura-vacia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1rem;
+    color: var(--vino);
+    background-color: var(--crema);
+}
+
+.enlace-titulo {
+    color: var(--texto);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.enlace-titulo:hover {
+    color: var(--vino);
+    text-decoration: underline;
+}
+
+/* Pagina de detalle: dos columnas con Flexbox.
+   Izquierda: portada + formulario de la portada.
+   Derecha: datos del libro + descripción. */
+.detalle-libro {
+    display: flex;
+    align-items: stretch;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.detalle-portada {
+    flex: 0 0 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.portada-detalle {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 480px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid var(--borde);
+    background-color: var(--crema-clara);
+    box-shadow: 0 2px 8px rgba(22, 17, 15, 0.08);
+}
+
+/* Recuadro que se ve cuando el libro no tiene portada */
+.portada-vacia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    height: 420px;
+    border: 2px dashed var(--arena);
+    box-shadow: none;
+    color: var(--suave);
+    font-size: 0.9rem;
+}
+
+.portada-vacia small {
+    font-size: 0.75rem;
+}
+
+/* El formulario de la portada es mas angosto: menos relleno */
+.panel-portada {
+    padding: 1rem;
+}
+
+.panel-portada .titulo-caja {
+    font-size: 1rem;
+}
+
+/* El input de archivo trae dos textos ("Seleccionar archivo" + el nombre);
+   con letra mas chica caben los dos en la columna angosta. */
+.panel-portada input[type="file"] {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.35rem;
+}
+
+.panel-portada .form-check-label {
+    font-size: 0.85rem;
+}
+
+.detalle-datos {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Lista de datos: nombre a la izquierda, valor a la derecha */
+.lista-datos {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.lista-datos li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.45rem 0;
+    border-bottom: 1px solid var(--borde);
+    font-size: 0.9rem;
+}
+
+.lista-datos li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.lista-datos li > span {
+    color: var(--suave);
+}
+
+.descripcion-libro {
+    margin: 0;
+    line-height: 1.6;
+    white-space: normal;
+}
+
+/* Editor de la descripción: se abre y se cierra con <details> */
+.editor-descripcion {
+    margin-top: 1rem;
+    padding-top: 0.85rem;
+    border-top: 1px dashed var(--borde);
+}
+
+.editor-descripcion summary {
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--vino);
+}
+
+.editor-descripcion summary:hover {
+    color: var(--vino-claro);
+    text-decoration: underline;
+}
+
+.editor-descripcion[open] summary {
+    margin-bottom: 0.85rem;
+}
+
+/* Portada que ya tiene el libro, en el formulario de editar */
+.portada-actual {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.6rem;
+}
+
+.portada-actual img {
+    width: 68px;
+    height: 96px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid var(--borde);
+}
+
+/* ============================================================
+   Pantallas pequeñas
+   ============================================================ */
+
+@media (max-width: 767.98px) {
+    .contenedor-auth {
+        padding: 1rem;
+    }
+
+    .panel-lateral {
+        display: none;
+    }
+
+    .panel-formulario {
+        border-left: 1px solid var(--borde);
+        border-radius: 16px;
+        padding: 2rem 1.5rem;
+    }
+
+    .cabecera-pagina {
+        align-items: flex-start;
+    }
+
+    /* En el celular la pagina de detalle se acomoda en una columna */
+    .detalle-libro {
+        flex-direction: column;
+    }
+
+    .detalle-portada {
+        flex: none;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+}
